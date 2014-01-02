@@ -7,6 +7,7 @@
 //
 
 #import "HomepwnerAppDelegate.h"
+#import "ItemsViewController.h"
 
 @implementation HomepwnerAppDelegate
 
@@ -14,6 +15,18 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    // Create a ItemsViewController
+    ItemsViewController *itemsViewController = [[ItemsViewController alloc] init];
+    
+    // Create an instance of a UINavigationController
+    // its stack contains only itemsViewController
+    UINavigationController *navController = [[UINavigationController alloc]
+                                             initWithRootViewController:itemsViewController];
+    
+    // Place navigation controller's view in the window hierarchy
+    [[self window] setRootViewController:navController];
+        
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
