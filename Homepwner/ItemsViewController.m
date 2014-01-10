@@ -17,9 +17,6 @@
     // Call the superclass's designated initializer
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
-        for (int i = 0; i < 5; i++) {
-            [[BNRItemStore sharedStore] createItem];
-        }
 
         [[self navigationItem] setTitle:@"Homepwner"];
         
