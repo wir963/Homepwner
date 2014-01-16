@@ -214,6 +214,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     
     // Put that image onto the screen in our image view
     [imageView setImage:image];
+    [item setThumbnailDataFromImage:image];
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         // If on the phone, the image picker is presented modally. Dismiss it.
